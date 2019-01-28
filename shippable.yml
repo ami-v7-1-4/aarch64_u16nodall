@@ -2,10 +2,10 @@ language: node_js
 
 # Version number
 node_js:
-  - 6.14 #.4 
-  - 8.12 #.0 
-  - 10.13 #.0 
-  - 11.1 #.0
+  - 6.16 #.4 
+  - 8.15 #.0 
+  - 10.15 #.0 
+  - 11.6 #.0
 
 runtime:
   nodePool: custom__aarch64__Ubuntu_16_04
@@ -18,6 +18,7 @@ build:
     
   ci:
     - node --version
+    - npm version #6.5.0
     - docker ps
     - docker images
     - docker pull shippabledocker/sample_node_pvt:ecr
